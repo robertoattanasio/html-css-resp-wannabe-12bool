@@ -1,146 +1,71 @@
 .row {
-  width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+  width: 90%;
+  margin: auto;
 }
 
-/* BLOCCO LEZIONI */
-#lezioni .row>.left,
-#lezioni .row>.right {
-  width: 50%;
-  float: left;
-}
-
-#lezioni .row img {
-  /* per centrare orizzontalmente */
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-#lezioni {
-  text-align: center;
-}
-
-/* BLOCCO STEPS */
-#steps .row>.left,
-#steps .row>.central,
-#steps .row>.right {
-  float: left;
-  width: 33%;
-}
-
-#steps {
-  text-align: center;
-}
-
-/* BLOCCO PERCHE */
-#why {
-  text-align: center;
-}
-
-#why .row>.first,
-#why .row>.second,
-#why .row>.third {
-  width: 100%;
-  margin-top: 80px;
-}
-
-#why .row img {
-  background-color: #428bca;
-  border-radius: 50%;
-  padding: 30px;
-}
-
-/* COMMON */
 .row::after {
   content: '';
   display: table;
   clear: both;
 }
 
-.container.grey {
+#lezioni.container, #steps.container {
+  margin: 0 0;
+}
+
+.bg-grey {
   background-color: #f9f9f9;
 }
 
-img {
+[class*="col-"] {
+  padding: 2%;
+}
+
+h3, p {
+  margin: 20px 0;
+}
+
+#lezioni, #steps, #why {
+  text-align: center;
+}
+
+#lezioni img, #steps img {
   height: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
-.clear {
-  clear: both;
-}
-
-/* ISTRUZIONI TABLET MAX WIDTH 1024px / IPAD PRO */
-@media screen and (max-width:1024px) {
-  .container.grey {
-    background-color: #f9f9f9;
-  }
-
-  /* INIZIALIZZAZIONE MARGIN-TOP IMG */
-  img {
-    margin-top: 30px;
-  }
-
-  /* INIZIALIZZIONE MARGIN BODY */
-  body {
-    margin: 0;
-  }
-
-  /* AGGIUNTA PADDING TOP E BOTTOM PER SEZIONI */
-  #lezioni, #steps, #why {
-    padding: 10px 0;
-  }
-
-  /* CORREZIONE DELLE ROW */
-  .row {
-    margin-top: 0;
-    width: 100%;
-  }
-
-  /* ELIMINAZIONE H1,H3 MARGIN */
-  h1, h3 {
-    margin: 0;
-  }
-
-  /* RIPOSIZIONAMENTO VERTICALE BLOCCO LEZIONI */
-  #lezioni .row>.left, #lezioni .row>.right {
-    width: 100%;
-    margin: auto;
-    float: none;
-  }
-
-  /* RIPOSIZIONAMENTO VERTICALE BLOCCO STEPS  */
-  #steps .row>.left, #steps .row>.central, #steps .row>.right {
-    width: 100%;
-    margin: auto;
-    float: none;
-  }
-
-  /* DISATTIVAZIONE MARGIN-TOP DEL ROW, BLOCCO WHY */
-  #why .row>.first, #why .row>.second, #why .row>.third {
-    margin-top: 0px;
-  }
-
-  /* DISATTIVAZIONE MARGINI DELL'HR */
-  hr {
-    margin: 0;
+/* RESIZE IMMAGINI PER TABLET */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  #lezioni img, #steps img {
+    height: 150px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
-/* ISTRUZIONI MOBILE MAX WIDTH 420px */
-/* CAMBIO COLORE SFONDO PER BLOCCHI LEZION E WHY */
-@media screen and (max-width:420px) {
-  #lezioni, #why {
-    background-color: #f9f1d1;
+/* RESIZE IMMAGINI PER PHONES */
+@media screen and (max-width: 768px) {
+  #lezioni img, #steps img {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
-/* ISTRUZIONI MOBILE MAX WIDTH 320px */
-/* RESIZE IMMAGINI */
-@media screen and (max-width:320px) {
-  img {
-    height: 70px;
+#why .row img {
+  height: 200px;
+  background-color: #428bca;
+  border-radius: 50%;
+  padding: 30px;
+}
+
+/* RESIZE IMMAGINI SEZIONE WHY PER PHONES */
+@media screen and (max-width: 768px) {
+  #why .row img {
+    height: 100px;
+    background-color: #428bca;
+    border-radius: 50%;
+    padding: 30px;
   }
 }
